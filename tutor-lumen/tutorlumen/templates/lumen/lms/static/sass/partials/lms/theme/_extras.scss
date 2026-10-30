@@ -1,0 +1,93 @@
+// Lumen Brand Colors
+$primary: #0F766E;
+$primary-dark: #0B5E58;
+$ink: #0B1F2A;
+$page-bg: #F4F8F8;
+$accent-amber: #F59E0B;
+
+// Page Background and Body Text
+body,
+.window-wrap {
+  background-color: $page-bg;
+  color: $ink;
+}
+
+// Global Header
+.global-header,
+header.global-header {
+  background: #FFFFFF;
+  border-bottom: 2px solid $primary;
+
+  .nav-links a,
+  .nav-item a,
+  .user-link {
+    color: $ink;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  .nav-sub {
+    border-top: 2px solid $primary;
+  }
+}
+
+// Links
+a,
+a:visited {
+  color: $primary;
+}
+
+a:hover,
+a:focus {
+  color: $primary-dark;
+}
+
+// Primary Buttons
+.btn-primary,
+button.btn-primary,
+a.btn-primary,
+.action-primary {
+  background-color: $primary !important;
+  border-color: $primary !important;
+  color: #FFFFFF !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $primary-dark !important;
+    border-color: $primary-dark !important;
+    color: #FFFFFF !important;
+  }
+}
+
+.btn-outline-primary {
+  color: $primary !important;
+  border-color: $primary !important;
+
+  &:hover,
+  &:focus {
+    background-color: $primary !important;
+    border-color: $primary !important;
+    color: #FFFFFF !important;
+  }
+}
+
+// Footer
+.wrapper-footer {
+  background: $ink;
+  border-top: 3px solid $accent-amber;
+  color: #FFFFFF;
+
+  a,
+  a:visited {
+    color: #FFFFFF;
+    &:hover,
+    &:focus {
+      color: $accent-amber;
+    }
+  }
+}
+
