@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tutor-lumen"
+version = "0.1.0"
+description = "Lumen theme plugin for Tutor"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "tutor>=19.0.0",
+]
+
+[project.entry-points."tutor.plugin.v1"]
+lumen = "tutorlumen.plugin"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tutorlumen*"]
+
+[tool.setuptools.package-data]
+tutorlumen = ["templates/**/*"]
