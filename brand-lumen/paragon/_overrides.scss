@@ -1,0 +1,31 @@
+// Overrides for MFE components
+body {
+  background-color: #F4F8F8;
+  color: #0B1F2A;
+}
+
+// Ensure primary buttons match Lumen teal
+.btn-primary {
+  background-color: #0F766E !important;
+  border-color: #0F766E !important;
+  color: #FFFFFF !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #0B5E58 !important;
+    border-color: #0B5E58 !important;
+    color: #FFFFFF !important;
+  }
+}
+
+// Brand links
+a {
+  color: #0F766E;
+
+  &:hover,
+  &:focus {
+    color: #0B5E58;
+  }
+}
+

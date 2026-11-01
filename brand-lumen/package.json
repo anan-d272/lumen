@@ -1,0 +1,8 @@
+{
+  "name": "@edx/brand",
+  "version": "1.0.0",
+  "description": "Lumen brand package for Open edX MFEs",
+  "main": "index.js",
+  "license": "AGPL-3.0"
+}
+

@@ -17,7 +17,7 @@ hooks.Filters.ENV_PATTERNS_INCLUDE.add_items(
     ]
 )
 
-# Register comprehensive theme directory in LMS and CMS settings
+# Register comprehensive theme and MFE branding patches
 hooks.Filters.ENV_PATCHES.add_items(
     [
         (
@@ -34,6 +34,21 @@ if "/openedx/themes" not in COMPREHENSIVE_THEME_DIRS:
 ENABLE_COMPREHENSIVE_THEMING = True
 if "/openedx/themes" not in COMPREHENSIVE_THEME_DIRS:
     COMPREHENSIVE_THEME_DIRS.append("/openedx/themes")
+""",
+        ),
+        (
+            "mfe-dockerfile-post-npm-install",
+            """
+RUN npm install '@edx/brand@git+https://github.com/anan-d272/brand-lumen.git#e8519359d1da0eb200cfbf6aa43e264f86542364'
+""",
+        ),
+        (
+            "mfe-lms-common-settings",
+            """
+MFE_CONFIG["LOGO_URL"] = LMS_ROOT_URL + "/theming/asset/images/logo.svg"
+MFE_CONFIG["LOGO_WHITE_URL"] = LMS_ROOT_URL + "/theming/asset/images/logo-white.svg"
+MFE_CONFIG["LOGO_TRADEMARK_URL"] = LMS_ROOT_URL + "/theming/asset/images/logo.svg"
+MFE_CONFIG["FAVICON_URL"] = LMS_ROOT_URL + "/theming/asset/images/favicon.svg"
 """,
         ),
     ]
